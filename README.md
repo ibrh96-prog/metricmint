@@ -1,5 +1,7 @@
 # MetricMint
-
+[![Buy on Gumroad](https://img.shields.io/badge/Buy%20on%20Gumroad-%2349-green)](https://ibrh96.gumroad.com/l/jwdmao)
+> 🔗 **[Live Demo](https://metricmint-app-production.up.railway.app)** · 💰 **[Buy the boilerplate — $49](https://ibrh96.gumroad.com/l/jwdmao)**
+> 
 MetricMint — a single-user MRR & growth dashboard for indie hackers.
 
 Tech stack
