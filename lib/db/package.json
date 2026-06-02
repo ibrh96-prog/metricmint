@@ -1,0 +1,11 @@
+{
+  "name": "@metricmint/db",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "drizzle-orm": "^0.44.0",
+    "drizzle-zod": "^0.7.0",
+    "zod": "^4.0.0"
+  }
+}
