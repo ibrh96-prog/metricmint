@@ -1,0 +1,10 @@
+import pg from 'pg';
+import dotenv from 'dotenv';
+import path from 'path';
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { metrics, settings } from './schema';
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+const connectionString = process.env.DATABASE_URL || '';
+const pool = new pg.Pool({ connectionString });
+export const db = drizzle(pool);
+export { metrics, settings, pool };

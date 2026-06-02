@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: MetricMint API
+  version: 1.0.0
+servers:
+  - url: /api
+paths:
+  /healthz:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+  /metrics:
+    get:
+      summary: List metrics
+      responses:
+        '200':
+          description: array
+    post:
+      summary: Create metric
+      requestBody:
+        required: true
+      responses:
+        '201':
+          description: created
+  /metrics/{id}:
+    patch:
+      summary: Update metric
+      parameters:
+        - in: path
+          name: id
+          required: true
+      responses:
+        '200':
+          description: updated
+    delete:
+      summary: Delete metric
+      parameters:
+        - in: path
+          name: id
+          required: true
+      responses:
+        '204':
+          description: deleted
+  /settings:
+    get:
+      summary: Get settings
+      responses:
+        '200':
+          description: settings
+    put:
+      summary: Update settings
+      responses:
+        '200':
+          description: updated
+  /summary:
+    get:
+      summary: Computed KPIs
+      responses:
+        '200':
+          description: summary
