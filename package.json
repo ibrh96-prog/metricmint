@@ -7,9 +7,11 @@
     "dev:web": "pnpm --filter metricmint-app dev",
     "dev": "concurrently \"pnpm --filter metricmint-api dev\" \"pnpm --filter metricmint-app dev\"",
     "build": "pnpm -w -r build",
+    "build:api": "esbuild artifacts/api-server/src/serverless.ts --bundle --platform=node --target=node20 --format=cjs --outfile=api/_bundle.cjs",
     "start": "pnpm --filter metricmint-api start"
   },
  "devDependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.24.0"
   }
 }
